@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f1">
+  <meta name="description" content="Цветочный мир — домашние и дачные растения, свежие цветы, букеты, открытки и игрушки с доставкой по Москве до 30 минут.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Цветочный мир — цветы, растения и подарки в Москве">
+  <meta property="og:description" content="Домашние и дачные растения, цветы, букеты, открытки и подарки.">
+  <meta property="og:image" content="assets/generated/hero.webp">
+  <title>Цветочный мир — цветы, растения и подарки в Москве</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header" id="top">
+    <div class="header-inner wrap">
+      <a class="brand" href="#top" aria-label="Цветочный мир — на главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 44 44" fill="none"><path d="M22 22c-2-8-1-14 1-18 4 5 5 11 2 18 7-5 13-6 18-4-3 6-9 9-18 8 6 5 9 10 8 16-7-1-11-6-12-15-2 8-6 13-12 15-2-7 1-13 9-18-9 2-15 0-18-5 6-4 12-4 18 3Z" fill="currentColor"/><circle cx="22" cy="22" r="3" fill="#F5F4EA"/></svg>
+        </span>
+        <span class="brand-name">Цветочный <b>мир</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация">
+        <a href="#top">Главная</a>
+        <a href="#home-plants">Домашние растения</a>
+        <a href="#flowers">Цветы в подарок</a>
+        <a href="#garden">Дачные растения</a>
+        <a href="#cards">Открытки</a>
+        <a href="#toys">Игрушки</a>
+        <a class="nav-delivery" href="#delivery">Доставка</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Цветы и подарки с душой</span>
+        <h1 id="hero-title">Цветочный<br><em>мир</em></h1>
+        <p class="hero-lead">Цветы, растения и подарки для ваших близких</p>
+        <p class="hero-delivery"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v11H3zM14 11h4l3 3v4h-7z"/><circle cx="7.5" cy="19" r="1.5"/><circle cx="18" cy="19" r="1.5"/></svg>Доставка по Москве до 30 минут</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Смотреть каталог <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#delivery">О доставке</a>
+        </div>
+        <div class="hero-note"><span class="note-leaf" aria-hidden="true">✳</span> Маленький повод порадовать — уже повод</div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/generated/hero.webp" alt="Нежные цветы и зелёные растения в светлом интерьере" fetchpriority="high" width="900" height="740">
+        <div class="hero-photo-note"><span class="photo-note-icon" aria-hidden="true">✿</span><span>Тепло природы<br>у вас дома</span></div>
+        <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span><span class="hero-sparkle sparkle-two" aria-hidden="true">✿</span>
+      </div>
+      <span class="hero-side-label" aria-hidden="true">С любовью, природе</span>
+    </section>
+
+    <section class="promise-strip" aria-label="Наш магазин">
+      <div class="wrap promise-inner">
+        <span><i aria-hidden="true">✿</i> Цветы и растения</span><span><i aria-hidden="true">❋</i> Подарки для близких</span><span><i aria-hidden="true">→</i> Доставка по Москве</span>
+      </div>
+    </section>
+
+    <section class="categories section wrap" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">Найдите своё</span><h2 id="categories-title">Что ищете сегодня?</h2></div>
+        <p>От зелёного уголка дома до букета для особенного момента.</p>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+
+    <section class="catalog section" id="catalog" aria-labelledby="catalog-title">
+      <div class="wrap">
+        <div class="section-heading catalog-heading">
+          <div><span class="eyebrow">Вдохновение рядом</span><h2 id="catalog-title">Каталог</h2></div>
+          <span class="catalog-count" id="catalog-count" aria-live="polite"></span>
+        </div>
+        <div class="catalog-tools">
+          <div class="filter-list" role="group" aria-label="Фильтр по категории" id="filter-list"></div>
+          <label class="search-box"><span class="sr-only">Поиск по товарам</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.3 4.3"/></svg><input id="search-input" type="search" placeholder="Найти цветок или подарок" autocomplete="off"><kbd>/</kbd></label>
+        </div>
+        <p class="no-results" id="no-results" hidden>По вашему запросу пока ничего не нашлось. Попробуйте изменить поиск.</p>
+        <div id="catalog-sections"></div>
+      </div>
+    </section>
+
+    <section class="delivery-section section wrap" id="delivery" aria-labelledby="delivery-title">
+      <div class="delivery-card">
+        <div class="delivery-content"><span class="eyebrow eyebrow-light">Мы уже в пути</span><h2 id="delivery-title">Доставка по Москве<br><em>до 30 минут</em></h2><p>Быстро доставим цветы, растения и подарки по Москве.</p><a class="button button-light" href="#catalog">Выбрать подарок <span aria-hidden="true">→</span></a></div>
+        <div class="delivery-art" aria-hidden="true"><div class="delivery-sun"></div><div class="delivery-plant"><span></span><span></span><span></span><span></span></div><div class="delivery-box">✿</div><span class="delivery-flower">✿</span><span class="delivery-spark">✳</span><span class="delivery-line"></span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-main">
+      <div class="footer-brand"><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44" fill="none"><path d="M22 22c-2-8-1-14 1-18 4 5 5 11 2 18 7-5 13-6 18-4-3 6-9 9-18 8 6 5 9 10 8 16-7-1-11-6-12-15-2 8-6 13-12 15-2-7 1-13 9-18-9 2-15 0-18-5 6-4 12-4 18 3Z" fill="currentColor"/><circle cx="22" cy="22" r="3" fill="#F5F4EA"/></svg></span><span class="brand-name">Цветочный <b>мир</b></span></a><p>Цветы, растения и подарки<br>с доставкой по Москве.</p></div>
+      <div class="footer-links"><span class="footer-title">Разделы</span><a href="#top">Главная</a><a href="#catalog">Каталог</a><a href="#delivery">Доставка</a></div>
+      <a class="back-to-top" href="#top">Наверх <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="footer-bottom wrap"><span>© Цветочный мир</span><span>Создано с заботой о природе <i aria-hidden="true">✿</i></span></div>
+  </footer>
+
+  <dialog class="product-dialog" id="product-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Закрыть окно">×</button>
+    <div class="dialog-image-wrap"><img id="dialog-image" alt="" hidden></div>
+    <div class="dialog-info"><span class="eyebrow" id="dialog-category"></span><h2 id="dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><strong class="dialog-price" id="dialog-price"></strong><p class="dialog-note">Информационный каталог. Для заказа свяжитесь с магазином.</p></div>
+  </dialog>
+</body>
+</html>
